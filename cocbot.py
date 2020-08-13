@@ -10,20 +10,6 @@ load_dotenv()
 TOKEN1 = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
-"""client = discord.Client()
-
-@client.event
-async def on_ready():
-    for guild in client.guilds:
-        if guild.name == GUILD:
-            break
-
-    print(
-        f'{client.user} is connected to the following guild:\n'
-        f'{guild.name}(id: {guild.id})'
-    )
-
-"""
 global PlayerList
 PlayerList = []
 global ClanList
@@ -43,9 +29,6 @@ async def playerentry(ctx):
 
     channel = await ctx.author.create_dm()
     submit_channel = ctx.channel
-    #a = bot.get_channel(736018169696878672)
-    #print(a)
-    #print(submit_channel)
 
     """myfile = open("playerlist.txt", "w")
     myfile.write(str(datetime.datetime.now()) + str(chosentags))
