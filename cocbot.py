@@ -15,7 +15,11 @@ GUILD = os.getenv('DISCORD_GUILD')
 bot = commands.Bot(command_prefix='!')
 
 @bot.command()
-async def p(ctx):
+async def how(ctx):
+    await ctx.channel.send("You may use the following commands:\n!help\n!playerentry\n!clanentry\n!playersearch\n!clansearch\n!deleteplayerentry\n!deleteclanentry\n!renewplayerentry\n!renewclanentry ")
+
+@bot.command()
+async def playerentry(ctx):
 
     answers = []
     disc_author = str(ctx.author)
